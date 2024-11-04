@@ -1,4 +1,5 @@
-Знания MySQL + оптимизировать запросыИмеется 3 таблицы: **info, data, link,** есть запрос для получения данных:select * from data,link,info where link.info_id = info.id and link.data_id = data.id**предложить варианты оптимизации:**
+#Задание №2
+Знания MySQL + оптимизировать запросы.Имеется 3 таблицы: **info, data, link,** есть запрос для получения данных:select * from data,link,info where link.info_id = info.id and link.data_id = data.id**предложить варианты оптимизации:**
 - таблиц
 - запроса.
 
@@ -21,7 +22,7 @@
             `data_id` int(11) NOT NULL,
             `info_id` int(11) NOT NULL
     ) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
-
+# Мое решение
 Моя мысль по поводу оптимизации такова:
     1) Добавить индексы на столбцы, которые участвуют в соединениях:
         CREATE INDEX idx_info_id ON link(info_id);
