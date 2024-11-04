@@ -24,6 +24,7 @@
     ) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
 # Мое решение
 Моя мысль по поводу оптимизации такова:
+    
     1) Добавить индексы на столбцы, которые участвуют в соединениях:
         CREATE INDEX idx_info_id ON link(info_id);
         CREATE INDEX idx_data_id ON link(data_id);
