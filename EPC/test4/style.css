@@ -1,0 +1,13 @@
+.button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругляем углы */
+    font-size: 16px; /* Увеличиваем шрифт */
+}
