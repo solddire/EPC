@@ -1,4 +1,4 @@
-#Задание №2
+# Задание №2
 Знания MySQL + оптимизировать запросы.Имеется 3 таблицы: **info, data, link,** есть запрос для получения данных:select * from data,link,info where link.info_id = info.id and link.data_id = data.id**предложить варианты оптимизации:**
 - таблиц
 - запроса.
