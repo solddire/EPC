@@ -27,8 +27,11 @@
     1) Добавить индексы на столбцы, которые участвуют в соединениях:
         CREATE INDEX idx_info_id ON link(info_id);
         CREATE INDEX idx_data_id ON link(data_id);
+
     2)Можно оптимизировать кодировку, но тут смотря по надобности(с cp1251 однажды были проблемы, сталкивался). Я зачастую использую utf8mb4.
+
     3)Можно оптимизировать запрос с использованием INNER JOIN, чтобы избежать избыточности при использовании селекта, например:
+
     SELECT data.*, info.* FROM link
     INNER JOIN data ON link.data_id = data.id
     INNER JOIN info ON link.info_id = info.id;
